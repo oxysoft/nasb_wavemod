@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net472</TargetFramework>
+        <LangVersion>7.3</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="0Harmony20, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\.steam\steam\steamapps\common\Nickelodeon All-Star Brawl\BepInEx\core\0Harmony20.dll</HintPath>
+      </Reference>
+      <Reference Include="Assembly-CSharp, Version=2012.1.7.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\.steam\steam\steamapps\common\Nickelodeon All-Star Brawl\Nickelodeon All-Star Brawl_Data\Managed\Assembly-CSharp.dll</HintPath>
+      </Reference>
+      <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\.steam\steam\steamapps\common\Nickelodeon All-Star Brawl\Nickelodeon All-Star Brawl_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+      </Reference>
+      <Reference Include="BepInEx, Version=5.4.17.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\.steam\steam\steamapps\common\Nickelodeon All-Star Brawl\BepInEx\core\BepInEx.dll</HintPath>
+      </Reference>
+      <Reference Include="netstandard, Version=2.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51">
+        <HintPath>..\..\.steam\steam\steamapps\common\Nickelodeon All-Star Brawl\Nickelodeon All-Star Brawl_Data\Managed\netstandard.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\.steam\steam\steamapps\common\Nickelodeon All-Star Brawl\Nickelodeon All-Star Brawl_Data\Managed\UnityEngine.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\.steam\steam\steamapps\common\Nickelodeon All-Star Brawl\Nickelodeon All-Star Brawl_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.InputLegacyModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\.steam\steam\steamapps\common\Nickelodeon All-Star Brawl\Nickelodeon All-Star Brawl_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+      </Reference>
+      <Reference Include="UnityEngine.InputModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <HintPath>..\..\.steam\steam\steamapps\common\Nickelodeon All-Star Brawl\Nickelodeon All-Star Brawl_Data\Managed\UnityEngine.InputModule.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+        <Exec Command="mv -f '$(TargetDir)$(TargetName).dll' '/home/nuck/.steam/steam/steamapps/common/Nickelodeon All-Star Brawl/BepInEx/plugins'" />
+    </Target>
+
+</Project>
