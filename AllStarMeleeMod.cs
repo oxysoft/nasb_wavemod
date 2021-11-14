@@ -1,7 +1,11 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
+using System.Text;
 using BepInEx;
 using BepInEx.Logging;
 using HarmonyLib;
+using Nick;
+using UnityEngine;
 
 namespace MyNameSpace // Rename "MyNameSpace"
 {
@@ -26,6 +30,14 @@ namespace MyNameSpace // Rename "MyNameSpace"
 
 			var harmony = new Harmony(NAME);
 			harmony.PatchAll();
+		}
+
+		private void OnGUI()
+		{
+			// if (GUI.Button(new Rect(10, 10, 150, 100), "I am a button"))
+			// {
+			// print("You clicked the button!");
+			// }
 		}
 	}
 }
