@@ -53,7 +53,7 @@ Reading the real joystick inputs for use in our postprocessor will allow us to d
 
 In NASB, wavedash distance is a binary operation, you just choose between PWD or AWD. In Melee, it's an infinite spectrum of angles, and the value of each angle changes for every frame depending on how far you are from the ground. No matter how you look at it, joystick users are handicapped against D-pad or keyboard users who can explicitly choose between the two with no room for error.
 
-Thus, we can make manipulate the boundary so the PWD zone grows bigger the closer you are to the ground, since it's more likely to be what you want. Players who prefer to stick with classic SSBM style wavedashing should enjoy this feature.
+Thus, we can manipulate the boundary so the PWD zone grows bigger the closer you are to the ground, since it's more likely to be what you want. Players who prefer to stick with classic SSBM style wavedashing should enjoy this feature.
 
 ## Waveland window extension
 
