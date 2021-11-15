@@ -49,17 +49,15 @@ The visual telegraphing in NASB isn't as clear as in Melee, making it harder to 
 
 Reading the real joystick inputs for use in our postprocessor will allow us to detect taps in a far more accurate manner. Currently, fastfalling is EXTREMELY sensitive because it's purely a threshold whereas it should be based on joystick velocity.
 
-## PWD/AWD angle fix
+## Automatic PWD/AWD affinity (joystick)
 
-In NASB, wavedash distance is a binary operation, you just choose between PWD or AWD. In Melee, it's an infinite spectrum of angles, and the value of each angle changes for every frame depending on how far you are from the ground.
+In NASB, wavedash distance is a binary operation, you just choose between PWD or AWD. In Melee, it's an infinite spectrum of angles, and the value of each angle changes for every frame depending on how far you are from the ground. No matter how you look at it, joystick users are handicapped against D-pad or keyboard users who can explicitly choose between the two with no room for error.
 
-No matter how you look at it, joystick users are handicapped against D-pad or keyboard users who can selectively pick between the two states. Therefore we buff the joystick as much as possible.
+Thus, we can make manipulate the boundary so the PWD zone grows bigger the closer you are to the ground, since it's more likely to be what you want. Players who prefer to stick with classic SSBM style wavedashing should enjoy this feature.
 
-When within short distance of the ground, we modify downward airdash angles to be much easier to hit on the horizontal axis. With sidewave buttons, this is always a PWD.
+## Waveland window extension
 
-## Wavedash extension
-
-Because wavedashes can come out instantly in one frame, we can extend an airborn airdash input by a number of frames if we want. This confers no advantage and gives the player some artificial satisfaction by seemingly giving the impression you wavedashed on a super late frame. The frames should be kept low (1-3 max) to avoid creating problems with sticky inputs.
+Because wavedashes can come out instantly in one frame, we can continue to detect waveland inputs even after landing. It's make waveland a little forgiving, and gives player an illusion of satisfaction from getting the waveland on a super late frame despite actually overshooting it. The frames should be kept low (1-3 max) to avoid creating problems with sticky inputs.
 
 ## Artificial momentum
 
