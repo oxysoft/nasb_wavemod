@@ -55,15 +55,17 @@ In NASB, wavedash distance is a binary operation, you just choose between PWD or
 
 Thus, we can manipulate the boundary so the PWD zone grows bigger the closer you are to the ground, since it's more likely to be what you want. Players who prefer to stick with classic SSBM style wavedashing should enjoy this feature.
 
-## Waveland window extension
+## Waveland coyote frames
 
 Because wavedashes can come out instantly in one frame, we can continue to detect waveland inputs even after landing. It's make waveland a little forgiving, and gives player an illusion of satisfaction from getting the waveland on a super late frame despite actually overshooting it. The frames should be kept low (1-3 max) to avoid creating problems with sticky inputs.
 
-## Artificial momentum
+## Artificial Momentum
 
-By pressing the horizontal directions in alternating pulses, we can possibly implement _artificial momentum_ in aerial states. For example, you could carry your momentum forward when jumping like in melee. You could wavedash, buffer a jump input, and keep a little bit of that horizontal momentum during your jump. A lot of possibilities come to mind!
+By pressing the horizontal directions in alternating pulses, it might be possibe to invent _artificial momentum_. In melee, you could maintain your momentum in mid-air with the joystick untouched. This creates short moments where the joystick is decoupled from movement, raising the skill ceiling of the game. With this, it would be possible to wavedash, buffer a jump input, and keep a little bit of that horizontal momentum during your jump. A lot of possibilities come to mind! 
 
 - Pressing any directional input would mix them with the velocity pulses.
-- Pressing the opposite horizontal direction would quickly take away from the artificial momentum, as expected.
+- Pressing any attack should completely override the pulses, to ensure the correct direction is used.  
+- Pressing the opposite horizontal direction would quickly take away from the artificial momentum.
+- Many values to configure.
 
 We can also implement it for ground states to some extent, but it might feel odd as you'd see the run animations.
