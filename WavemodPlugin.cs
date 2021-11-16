@@ -51,8 +51,8 @@ namespace MyNameSpace // Rename "MyNameSpace"
 	[BepInPlugin(ID, NAME, VERSION)]
 	public class WavemodPlugin : BaseUnityPlugin
 	{
-		private const string ID      = "com.author.project";
-		private const string NAME    = "All Star Melee";
+		private const string ID      = "com.oxysoft.wavemod";
+		private const string NAME    = "Wavemod";
 		private const string VERSION = "1.0";
 
 		public static WavemodPlugin Instance { get; private set; }
